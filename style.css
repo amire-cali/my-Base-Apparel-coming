@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+  /* === Primary Colors === */
+  --pink-400: hsl(0, 36%, 70%);
+  --red-500: hsl(0, 93%, 68%);
+
+  /* === Neutral Colors === */
+  --gray-900: hsl(0, 6%, 24%);
+
+  /* === Gradients === */
+  --gradient-light: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gradient-accent: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+body{
+    height: 100vh;
+     font-family: "Josefin Sans", sans-serif;
+}
+.tout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+     background: url(/base-apparel-coming-soon-master/images/bg-pattern-desktop.svg);
+     
+}
+.leftbox{
+    justify-content: last baseline;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    margin:  10px; 
+    padding-left: 25px;
+}
+.rightbox{
+    width: 40%;
+    height: 100%;
+}
+.rightbox img{
+    width: 100%;
+    height: 100%;
+}
+.logo{
+    width: 55%;
+    margin:  15px auto;
+    padding: 20px;
+    text-align: left;
+}
+.bigtitle{
+    width: 55%;
+    margin:  20px auto;
+    padding: 30px;
+    text-align: left;
+}
+.bigtitle h1{
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 1.4rem;
+    text-transform: uppercase;
+}
+.bigtitle h1 span{
+    color: var(--pink-400);
+    font-weight: 300;
+}
+.bigtitle p{
+    color: var(--pink-400);
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    line-height: 2rem;
+}
+.confirm-main {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+}
+
+.confirm-main input {
+  width: 75%;
+  border: 1px solid var(--pink-400);
+  border-radius: 50px;
+  padding: 1.3rem 5rem 1.3rem 1.5rem; /* padding يمين كبير للزر */
+  font-size: 1rem;
+  color: var(--gray-900);
+}
+
+.confirm-main input::placeholder {
+  color: var(--pink-400);
+}
+
+.confirm-btn {
+    width: 8rem;
+    height: 4rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50px;
+  background: var(--gradient-accent);
+   padding: 20px;
+   box-shadow: 2px  rgba(0, 0, 0, 0.6);
+   
+  transition: 0.3s;
+}
+
+.confirm-btn:hover {
+  background: var(--red-500);
+}
+
+.confirm-btn img {
+  width: 12px;
+}
+/* === Mobile First Style === */
+/* === Mobile First Style === */
+@media (max-width: 768px) {
+  .tout {
+    flex-direction: column; /* الصورة فوق والنص تحت */
+  }
+
+  .rightbox {
+    width: 100%;
+    order: -1; /* يخلي الصورة تطلع قبل النص */
+  }
+
+  .rightbox img {
+    content: url("hero-mobile.jpg"); /* صورة الموبايل */
+    width: 100%;
+    height: auto;
+  }
+
+  .leftbox {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .bigtitle {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .bigtitle h1 {
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+  }
+
+  .bigtitle p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .confirm-main {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .confirm-main input {
+    width: 79%;
+    font-size: 0.9rem;
+    padding: 1rem 4rem 1rem 1.2rem;
+  }
+
+  .confirm-btn {
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+  }
+
+  .confirm-btn img {
+    width: 10px;
+  }
+}
+
